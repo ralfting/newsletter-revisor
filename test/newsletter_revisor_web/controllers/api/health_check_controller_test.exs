@@ -1,4 +1,4 @@
-defmodule NewsletterRevisorWeb.Api.HeathCheckControllerTest do
+defmodule NewsletterRevisorWeb.Api.HealthCheckControllerTest do
   use NewsletterRevisorWeb.ConnCase, async: true
 
   describe "index/1" do
@@ -8,7 +8,7 @@ defmodule NewsletterRevisorWeb.Api.HeathCheckControllerTest do
         |> get(Routes.api_health_check_path(conn, :index))
         |> json_response(:ok)
 
-      assert data == %{"status" => "ok"}
+      assert data == %{"data" => %{"status" => "ok"}}
     end
   end
 end
