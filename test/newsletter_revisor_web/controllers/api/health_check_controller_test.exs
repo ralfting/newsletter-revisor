@@ -8,7 +8,7 @@ defmodule NewsletterRevisorWeb.Api.HealthCheckControllerTest do
         |> get(Routes.api_health_check_path(conn, :index))
         |> json_response(:ok)
 
-      assert data == %{"data" => %{"status" => "ok"}}
+      assert data == %{"data" => %{"status" => "super ok"}}
     end
   end
 end
